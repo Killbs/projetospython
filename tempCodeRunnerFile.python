@@ -1,0 +1,10 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+
+driver = webdriver.Firefox()
+driver.get("https://pt.wikipedia.org/wiki/Akira")
+result = driver.find_element(By.CLASS_NAME, 'mw-footer').get_attribute("href")
+print(result)
+# link = result.find_element(By.CSS_SELECTOR, "a")
+# print(link)
